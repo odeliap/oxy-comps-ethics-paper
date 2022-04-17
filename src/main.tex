@@ -1,0 +1,131 @@
+\documentclass[10pt,twocolumn]{article} 
+
+% use the oxycomps style file
+\usepackage{oxycomps}
+
+% read references.bib for the bibtex data
+\bibliography{references}
+
+% include metadata in the generated pdf file
+\pdfinfo{
+    /Title (Ethics Paper: Predicting Cryptocurrency Prices for Stock Trading Using Machine Learning)
+    /Author (Odelia Putterman)
+}
+
+% set the title and author information
+\title{Ethics Paper: Predicting Cryptocurrency Prices for Stock Trading Using Machine Learning}
+\author{Odelia Putterman}
+\affiliation{Occidental College}
+\email{putterman@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    This paper is an ethical assessment of the related Occidental Computer Science Comprehensive Project: \textit{Predicting Cryptocurrency Prices for Stock Trading Using Machine Learning}. This paper grapples with the ethical considerations of utilizing machine learning to predict cryptocurrency prices for the purpose of stock trading and investing, arguing against the possibility of addressing all ethical considerations raised in the comps project. We begin by detailing what ethical issues may arise, reviewing each in greater detail in the following sections. We conclude with tips and advice for addressing such ethical issues and producing an ethically-considerate comps project.
+\end{abstract}
+
+\section{Introduction}
+
+For my senior-year Occidental College Computer Science Comprehensive Project, I have chosen to build an index fund for cryptocurrencies, with rebalancing occuring dynamically in response to crypto price predictions from a machine learning (ML) algorithm. This proposed index fund will utilize the volatility of cryptocurrencies to maximize gains by dynamically trading index fund stocks rather than rebalancing on a preset schedule. We address the ethical implications of this project in the below sections.
+
+\section{Ethical Considerations}
+
+When considering the ethical considerations of predicting cryptocurrency prices for stock trading using machine learning, we must break the question into sub-tasks. Since this project advocates for the use of cryptocurrencies, we must consider the ethics of cryptocurrencies themselves. Further, we must look into the ethics of stock trading and the investor obligations that come into play when building an index fund, especially one built with machine learning.
+
+\subsection{Investor Obligations}
+
+Managing an index fund holds a moral obligation to the holders to aim to grow their investment. For a variety of reasons discussed further on in this paper, cryptocurrency price prediction carries inherit risk. In this proposed fund, if the crypto prices are wrongly predicted, funds will likely get misallocated and, in turn, lose the investor money. If the machine learning algorithm wrongly predicts the coming crypto prices, we risk losing investor money and being an unethical project, as it promotes investing with no return.
+
+\subsection{Data Bias}
+
+Data Bias is a massive consideration to take into account when analyzing the results of machine learning projects. All machine learning, regardless of the task, shares a reliance on input data for learning and training. And, according to \citetitle{RiskOfMachineLearningBias}, ``[The] models learn exactly what they are taught". This input data heavily affects the model's outcome. As data scientists classically say, ``garbage in, garbage out". In training the model for this comps project, in order to not receive ``garbage out" and lose investor money, we must ensure the input data is not biased. Since this machine learning project takes in sentiment data and outputs a price prediction for each cryptocurrency, there is no fear of outputting politically incorrect and dangerous results. But, there is a fear that biased input data will lead to biased price predictions, which would, in turn, lose investor holdings. Such bias could result from only looking at certain web sources which portray a biased sentiment towards cryptocurrencies or from not properly analyzing the given sentiment.
+
+To avoid wrongly predicting crypto prices and failing the fund investors, we must ensure high-quality data is being fed into the algorithm. But data bias is almost impossible to completely avoid, meaning we will most likely fall short of this goal, failing in our ethical obligation to investors.
+
+\subsection{Transparency and Security}
+
+To create an ethical project, there must be a high level of transparency around the algorithm's doings and we must aim to secure the investor holdings, to follow with the outlined investor obligations.
+
+\subsubsection{Cryptocurrency}
+
+This comps project involves cryptocurrencies, a relatively new phenomena stemming from advances and uses of blockchain technologies. To understand the ethical implications of encouraging individuals to place their assets in a cryptocurrency fund, we must evaluate the transparency and security of their nature. To do so, we dissect the technological mechanisms behind cryptocurrencies.
+
+Cryptocurrencies were first created for their supposed safety and security arising from their basis in blockchain technology. According to \citetitle{WhatIsBlockchain}, ``Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network". Each transaction is recorded as a ``block" of data, connected to the blocks before and after it in an irreversible chain (aka a blockchain). Due to its immutability, the risk of tampering by bad actors is eliminated, creating a trustworthy network. Traditionally, information storage and retrieval systems were susceptible to cyberattacks. Moreover, without transparency on behalf of the record-management company or system, record tampering would be harder to catch and verify. The open-book nature of blockchain allows for widespread verification of all transactions. Coupled with the blockchain's immutable nature, with no user nor managing power having the ability to alter or delete a transaction, blockchain technologies, and, hence, cryptocurrencies, are extremely safe from a tampering standpoint \cite{WhatIsBlockchain}. This addresses transparency on behalf of the cryptocurrency operations, but it does not cover the ethical considerations with regard to the security of such assets.
+
+A second consideration is the instability of where cryptocurrencies are hosted. One Washington Post Article, \citetitle{TrackingStolenCrypto}, details the commonality of crypto heists. Hackers have previously hacked into cryptocurrency trading networks, getting away with massive sums. In August of 2021, Poly Network, a trading platform for popular cryptocurrencies, was hacked, with the hackers taking 
+\$610 million in crypto, which they quickly converted to a ``stable coin". Luckily, the ``stable coin" Tether worked with authorities to release the holdings to the rightful owners. Nonetheless, this heist broke the belief that cryptocurrency is impossible to trace (public ledgers do not retain account holder information) \cite{TrackingStolenCrypto}. The anonymity of cryptocurrencies may be ethical, guarding the identity of its users or not, allowing for bad actors to use crypto for illicit activities, but it is certain that their online holdings make them susceptible to being stolen, further questioning the security of their nature.
+
+Despite the secure theoretical ideas behind cryptocurrencies, their value is often in flux. Ethicists have previously questioned the ethics of cryptocurrencies themselves. Professor Tobey Karen Scharding shared her evaluation of bitcoin from an ethical perspective in an interview at Rutgers Business School:
+
+\begin{quote}
+    My question was, is Bitcoin an ethical currency not is it ethical to use bitcoin or is it ethical to trade some dollars for bitcoin... With bitcoin, I felt there were too many uncertainties... [The] evaluation was pretty negative because bitcoin didn't really have any way to secure its value, and so it wouldn't be able to fulfill the ethical purpose of currency on Fichte's account of stabilizing and securing these exchanges over generations. \cite{IsBitcoinEthical}
+\end{quote}
+
+Professor Scharding refers here to the Fichte account, which explains that currency should allow people to live their lives with secure access to basic goods and services and allows them to enjoy life and exchange goods with other people. By Professor Scharding's logic, cryptocurrency falls short of being an ethical currency because its often-changing value means that one day it could secure these assets and more for a given holder while the next day it could be deemed worthless, leaving the holder unable to meet these basic needs. That said, she believes cryptocurrencies could become ethical if an entire nation takes on cryptocurrency and stabilizes its value \cite{IsBitcoinEthical}.
+
+\subsubsection{Model}
+
+Cryptocurrency prices are extremely volatile, making their price prediction a uniquely difficult challenge. The likelihood that this comps project were to succeed in accurately predicting cryptocurrency prices consistently is incredibly low. This leaves a high likelihood  of inaccurate predictions at some point, if not frequently, which has greater implications on the ethical consideration of investor obligations, model transparency, and security. Promoting the practice of placing a monetary commodity in cryptocurrencies is ethically dubious, as it holds high risks of loosing this money, threatening the financial security of such investors.
+
+To make this project more ethical, there would need to be a lot of transparency on the risks involved in investing in this comps project intended fund due to the accuracy rates of the developed machine learning model and the extremely volatile nature of the assets involved.
+
+\subsection{Investing}
+
+To explore the ethics of this investing-based project, we ask, \textit{is investing itself fair?} In investing, we subscribe to a system where the wealthy have an infinitely easier time to build more wealth than the poor do. The stock market is an inherently unfair playing field. Due to the compound nature of investing and investments, it is infinitely easier to become wealthy if you are already wealthy than it is to turn a little into a lot; the stock market favors those who start off with more. By this logic, it appears to be an unethical system.
+
+We can, however, approach ethical investing from another standpoint. Rather than concern ourselves with the ethics of investing itself, we can ask how to ethically invest money. There is a growing field of learning around \textit{ethical investing}. Ethical investing has many different approaches, but the idea is to use investing as a tool to do good. Manisha Thakor, a financial planner and consultant, says, according to \citetitle{LimitsOfEthicalInvesting}, ``The broad idea behind this style of investing is a belief that you can generate meaningful, measurable, societal outcomes while also generating a healthy profit". You can put your money towards companies addressing an ethical issue, such as climate change, racism, or workplace inequality while also generating wealth. The three overarching areas for ethical investments are environment issues, societal issues, and governance issues \cite{LimitsOfEthicalInvesting}. But, cryptocurrencies do not, to the best of my knowledge, fall under any of these categories. As such, they do not fall under any ethical investments and continue to fall under the aforementioned moral pitfalls.
+
+
+\subsection{Accessibility}
+
+Another ethical concern this project faces is accessibility. We must consider:
+
+\begin{itemize}
+    \item Is it fair that only some have access to crypto price predictions?
+    \item Is it ethically right to make such crypto price predictions widely available?
+    \item If crypto price predictions are made widely available, will the prediction itself alter the crypto prices, creating self-fulfilling, `announcement-driven' outcomes?
+\end{itemize}
+
+We navigate each of these questions in the below sections.
+
+\subsubsection{Power Distribution}
+
+As it stands, ``the rich get richer". If this comps project achieved any level of success in predicting cryptocurrency prices, there would be a question of \textit{who} gets access to these predictions. If these predictions were offered as a subscription service with a high buy-in, the buyers would most likely be those wealthier individuals, giving the elite investors a tool not readily available to the average investor, making it continuously easier for the wealthy to keep get wealthier while the poor get poorer. If these predictions or this fund were expensive and exclusive, we risk contributing to the wealth divide and creating further disparity in power distribution. If instead we choose to make this tool openly accessed, we run into other ethical problems.
+
+\subsection{Self-Fulfillment}
+
+Imagine now that everyone had access to this crypto price prediction tool and that it operated with some meaningful level of accuracy. If these predictions were so easily accessed, it is entirely possible that the predictions would become self-fulfilling cycle where:
+
+\begin{enumerate}
+    \item Price predictions are publicized;
+    \item People buy stock when its predicted to be rising in price and sell it when it is predicted to fall in the coming future;
+    \item These prediction-based purchases drive up or down the crypto.
+\end{enumerate}
+
+If this were to happen, no \textit{actual} predicting would be helpful, and all people would not be benefited by such predictions. As such, it is important that the price prediction component of this comps project be kept private, with only the fund performance made available.
+
+\subsection{Maintenance and its Environmental Cost}
+
+Maintaining the proposed index fund requires constantly retrieving sentiment data, performing natural language processing (a type of ML) on this data, feeding the outputs of the NLP sentiment analysis data to an ML algorithm for price-predictions, and feeding the ML outputs to a rebalancing algorithm for the index fund. These operations have an environmental impact and cost in addition to the initial cost of training these individual models. This comps project will utilize a recurrent neural network (RNN), a type of deep learning model. In a 2019 study at the University of Massachusetts at Amherst, it was approximated 626,000 pounds of carbon dioxide are used in training a large deep-learning model \cite{ShrinkingDLCarbonFootprint}. Though, in practice, this comps project will not consist of a large deep-learning model, in theory, this project should be executed with the use of a large model to boost accuracy in price predictions. The environmental impact of training and up-keeping such an RNN should not be taken lightly. Training and continuously processing information for this price-prediction project takes a tremendous amount of energy, which has a real-world environment cost.
+
+The second consideration is the environmental impact of cryptocurrencies, as they are the `product' being promoted by this project. Bitcoins enter circulation through \textit{mining}, a process of validating new blockchain transactions. When a transaction is requested to be processed, \textit{miners} race to be the first to get their validation accepted by solving a challenge, where their validation validates and record a bundle of new transactions, bundled into a \textit{block}, as the first miner to complete this process is awarded with new bitcoin and transaction fees. As crypto prices surge, more miners enter the race to win some crypto. Moreover, as more miners enter the race, the processing protocol makes it more difficult to win this race, by finding the \textit{nonce}, whereas when there are fewer users, the system makes this validation process and puzzle easier, all in the effort to keep block production time to ten minutes. It is approximated that there are around one million bitcoin miners. A lot of energy is spent from all these users aiming to mine bitcoin with their computing power. The University of Cambridge estimated bitcoin mining uses 121.36 terawatt hours a year \cite{BitcoinImpactOnClimate}. All this makes cryptocurrencies an unfriendly choice for ethicists and environmentalists. We conclude that cryptocurrencies, and, hence, this comps project, are unethical due to their environmental harm.
+
+\section{Tips and Advice}
+
+We have looked at the ethical implications of this project, addressing the ethics of transparency, asset security, investing, accessibility, power distribution, self-fulfillment, and the environmental cost, consistently finding that this project falls short of meeting ethical standards. Some of these issues, such as the ethics of investing, could never be solved by this project. But, we can suggest tips to make the project more ethical. We make the following suggestions:
+
+\begin{itemize}
+    \item The price-predictions algorithms be kept hidden to avoid self-fulfilling predictions.
+    \item The index fund share cost be relatively affordable or fractional shares be offered.
+    \item Fund management cost be low or free.
+    \item Sample training data from a variety of sources to reduce data bias.
+    \item Keep model training to a minimum and train the model in areas with more clean energy to minimize environmental harms.
+\end{itemize}
+
+Though this project is not completely ethical by the standards outlined, we can improve the ethical legitimacy of this project by following with the above suggestions.
+
+\printbibliography 
+
+\end{document}
